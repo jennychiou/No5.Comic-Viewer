@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -18,7 +19,7 @@
         <div class="col-md-12">
 
             <div class="img_1">
-                <img src="https://image.ibb.co/k4n5hJ/ad_1.png" alt="ad_1" border="0"  width="610" />
+                <img src="https://image.ibb.co/k4n5hJ/ad_1.png" alt="ad_1" border="0" width="610" />
             </div>
             <div class="middle">
                 <div id="DIV1">
@@ -61,8 +62,8 @@
             </div>
             <div class="content tabcontent">
                 <ul>
-                    <li style="margin-bottom:15px">Chapter 1: The F2E Challenge Start!</li>
-                    <li>Chapter 2: Todo List is Going Crazy!<div class="new">NEW</div></li>
+                    <li class="link" style="margin-top:5px;margin-bottom:15px;padding-right:324.7px;">&nbsp;&nbsp;&nbsp;&nbsp;Chapter 1: The F2E Challenge Start!</li>
+                    <li class="link" style="padding-right:250px;">&nbsp;&nbsp;&nbsp;&nbsp;Chapter 2: Todo List is Going Crazy!<div class="new">NEW</div></li>
                 </ul>
             </div>
 
@@ -74,5 +75,67 @@
             <br />
         </div>
     </main>
+
+    <div class="page2" style="visibility: hidden;">
+        <div class="back">
+            <span>The Hexschool&nbsp;&nbsp;</span>
+            <i class="fa fa-caret-right" style="cursor:pointer;"></i>
+        </div>
+        <div class="select_ch">
+            <select>
+                <option>Chapter 1</option>
+                <option>Chapter 2</option>
+            </select>
+        </div>
+        <div class="select_page">
+            <select>
+                <option>Page 1</option>
+                <option>Page 2</option>
+                <option>Page 3</option>
+                <option>Page 4</option>
+                <option>Page 5</option>
+                <option>Page 6</option>
+                <option>Page 7</option>
+                <option>Page 8</option>
+                <option>Page 9</option>
+                <option>Page 10</option>
+                <option>Page 11</option>
+                <option>Page 12</option>
+            </select>
+        </div>
+        <div class="view">
+            <i class="fas fa-sun pr-2" style="font-size:20px;"></i>
+            <input type="checkbox" id="view_mode" name="view_mode" />
+            <label class="view_mode_label" for="view_mode"></label>
+            <i class="fas fa-moon pl-2" style="font-size:20px;"></i>
+        </div>
+    </div>
+    <div class="page2_img" style="visibility: hidden;">
+        <button class="viewer_btn_left">
+            <i class="fas fa-chevron-left fa-2x"></i>
+        </button>
+        <img src="https://preview.ibb.co/nzAnEy/storyboard_1.png" alt="storyboard_1" border="0">
+        <button class="viewer_btn_right">
+            <i class="fas fa-chevron-right fa-2x"></i>
+        </button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".link").click(function () {
+                $("main").hide();
+                $(".page2").css('visibility', 'visible');
+                $(".page2_img").css('visibility', 'visible');
+
+            });
+            $(".back").click(function () {
+                $("main").show();
+                $(".page2").css('visibility', 'hidden');
+                $(".page2_img").css('visibility', 'hidden');
+
+            });
+        });
+    </script>
+
 </body>
 </html>
