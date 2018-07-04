@@ -199,6 +199,15 @@ li {
     background-color: #f2f2f2;
 }
 
+.comic_page_nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    background-color: #f2f2f2;
+}
+
 .back {
     height: 150px;
     display: flex;
@@ -267,4 +276,187 @@ li {
 
     #view_mode:checked + label:after {
         transform: translateX(100%);
+    }
+
+.viewer_btn_left, .viewer_btn_right {
+    background-color: #f2f2f2;
+    color: #e7e7e7;
+    border: none;
+    padding: 464px 10px 464px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+    .viewer_btn_left:hover, .viewer_btn_right:hover {
+        background-color: #000000;
+        color: #50FF44;
+        border: none;
+        padding: 464px 10px 464px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+
+.comic_page_nav_wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding-top: 1rem !important;
+}
+
+    .comic_page_nav_wrapper .viewer_nav_btn {
+        position: absolute;
+        width: 50px;
+        height: 65%;
+        bottom: 15px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 0;
+        cursor: pointer;
+    }
+
+        .comic_page_nav_wrapper .viewer_nav_btn:hover, .comic_page_nav_wrapper .viewer_nav_btn:focus {
+            background-color: #50FF44;
+        }
+
+        .comic_page_nav_wrapper .viewer_nav_btn.left {
+            left: 0;
+        }
+
+        .comic_page_nav_wrapper .viewer_nav_btn.right {
+            right: 0;
+        }
+
+.pt-3, .py-3 {
+    padding-top: 50px !important;
+}
+
+.comic_page_viewer_nav {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.viewer_nav_pages {
+    margin-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 120px;
+    padding-left: 0;
+    list-style: none;
+}
+
+    .viewer_nav_pages .page {
+        width: 80px;
+        padding: 5px;
+        cursor: pointer;
+        text-align: center !important;
+    }
+
+        .viewer_nav_pages .page img {
+            height: calc(100% - 16px);
+            opacity: 0.5;
+        }
+
+        .viewer_nav_pages .page:hover img {
+            opacity: 1;
+        }
+
+        .viewer_nav_pages .page.active img {
+            border: 3px solid #000;
+            opacity: 1;
+        }
+
+        .viewer_nav_pages .page.active .page_num {
+            position: relative;
+        }
+
+            .viewer_nav_pages .page.active .page_num:before {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 0;
+                height: 0;
+                left: 30px;
+                top: -10px;
+                border-style: solid;
+                border-width: 0 10px 10px 10px;
+                border-color: transparent transparent #000000 transparent;
+            }
+
+    .viewer_nav_pages .page_num {
+        display: block;
+        font-weight: bold;
+    }
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+small {
+    font-size: 80%;
+}
+
+small, .small {
+    font-size: 80%;
+    font-weight: 400;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.dark {
+    background-color: #000;
+    color: #fff;
+}
+
+    .dark header {
+        background-color: #50FF44;
+        color: #000;
+    }
+
+    .dark .comic_page_title {
+        color: #fff;
+    }
+
+    .dark .comic_page_view_mode label {
+        border-color: #fff;
+    }
+
+        .dark .comic_page_view_mode label:after {
+            background-color: #fff;
+        }
+
+    .dark .viewer_btn {
+        color: #fff;
+    }
+
+        .dark .viewer_btn:hover {
+            background-color: #50FF44;
+            color: #000;
+        }
+
+    .dark .page.active img {
+        border-color: #50FF44;
+    }
+
+    .dark .page.active .page_num:before {
+        border-color: transparent transparent #50FF44 transparent;
     }
